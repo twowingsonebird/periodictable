@@ -43,14 +43,14 @@ const int numRows = 9;     // The number of rows (9 sides on the prism so 9)
 const int numTrends = 6;   // The number of periodic trends (molar mass, melting point, etc.)
 const int homeButton = 2;  // Define the pin for the home button
 // Define button pins for each trend
-const int mmButton = 333;
-const int mpButton = 333;
-const int bpButton = 333;
-const int enButton = 333;
-const int ieButton = 333;
-const int arButton = 333;
-const int stateButton = 333;
-const int tempPot = 333;             // The pin for the temperature potentiometer
+const int mmButton = 34;
+const int mpButton = 35;
+const int bpButton = 36;
+const int enButton = 37;
+const int ieButton = 38;
+const int arButton = 39;
+const int stateButton = 40;
+const int tempPot = A0;             // The pin for the temperature potentiometer
 const int stepsPerRevolution = 200;  // The number of steps in a full rotation (200 for this motor)
 
 const int rowPins[numRows] = { 3, 4 };  // Create a constant integer array with the size of how many rows we have, containing the pin numbers for the button to each row
@@ -399,14 +399,14 @@ void setup() {
   for (int i = 0; i < numRows; i++) {
     pinMode(rowPins[i], INPUT);
   }
-  pinMode(homeButton, INPUT_PULLUP);
-  pinMode(mmButton, INPUT_PULLUP);
-  pinMode(mpButton, INPUT_PULLUP);
-  pinMode(bpButton, INPUT_PULLUP);
-  pinMode(enButton, INPUT_PULLUP);
-  pinMode(ieButton, INPUT_PULLUP);
-  pinMode(arButton, INPUT_PULLUP);
-  pinMode(stateButton, INPUT_PULLUP);
+  pinMode(homeButton, INPUT);
+  pinMode(mmButton, INPUT);
+  pinMode(mpButton, INPUT);
+  pinMode(bpButton, INPUT);
+  pinMode(enButton, INPUT);
+  pinMode(ieButton, INPUT);
+  pinMode(arButton, INPUT);
+  pinMode(stateButton, INPUT);
   pinMode(tempPot, INPUT);
 }
 
